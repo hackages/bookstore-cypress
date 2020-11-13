@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ],
+  "paths": {
+    "@services": ["src/app/services/index.ts"],
+    "@components": ["src/app/components/index.ts"],
+    "@models": ["src/types/index.ts"]
+  }
+}

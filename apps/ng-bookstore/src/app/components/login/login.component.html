@@ -1,0 +1,23 @@
+<form [formGroup]="loginForm" (submit)="login()">
+  <h2 data-test-id="welcome">Login To Browse our shop!</h2>
+  <div>
+    <label>Login: </label>
+    <br />
+    <input data-test-id="login" formControlName="login" placeholder="your login..." #login />
+    <div *ngIf="loginForm.controls.login.errors?.email">
+      Please choose a real email.
+    </div>
+  </div>
+  <div>
+    <label>Password: </label>
+    <br />
+    <input
+      data-test-id="password"
+      type="password"
+      formControlName="password"
+      placeholder="your password..."
+    />
+  </div>
+
+  <button data-test-id="submit" class="btn primary" [disabled]="loginForm.invalid" type="submit">Submit</button>
+</form>
